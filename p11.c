@@ -6,17 +6,19 @@ Output: 2 4 6 8 10 12 14*/
 void PrintEven(int iNo)
 {
     int iCnt = 0;
-    int even = 2;
 
     if (iNo <= 0)
     {
         return;
     }
 
-    for (iCnt = 0; iCnt < iNo; iCnt++)
+    for (iCnt = 1; iCnt <= 2*iNo;iCnt++)
     {
-        printf("%d ", even); 
-        even += 2;           
+        if ((iCnt % 2) == 0)
+        {
+          printf("%d\n",iCnt);
+        }
+           
     }
     printf("\n"); 
 }
@@ -31,4 +33,3 @@ int main()
     PrintEven(iValue);
     return 0;
 }
-
